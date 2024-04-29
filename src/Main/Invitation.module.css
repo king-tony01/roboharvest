@@ -1,0 +1,56 @@
+:root {
+  --primary: #008080;
+  --accent: #ffa500;
+  --white: #ffffff;
+}
+
+@media (min-width: 800px) {
+  .invitation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.invitation {
+  width: 95%;
+  padding: 10px;
+  box-shadow: 0 5px 30px rgba(79, 79, 79, 0.1);
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.button {
+  display: block;
+  padding: 10px 50px;
+  border: 2px solid var(--accent);
+  border-radius: 30px;
+  background: none;
+  font-size: 16px;
+  color: var(--accent);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.button:hover {
+  background: var(--accent);
+  color: var(--white);
+}

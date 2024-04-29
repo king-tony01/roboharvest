@@ -1,0 +1,24 @@
+import "dotenv/config.js";
+import { createConnection } from "mysql2/promises";
+import { readFileSync } from "fs";
+async function db() {
+  try {
+    const database = await createConnection({
+      host: process.env.DATABASE_HOST,
+      user: process.env.DATABASE_USER,
+      password: process.env.DATABASE_PASSWORD,
+      database: process.env.DATABASE,
+      port: 19655,
+      ssl: {
+        ca: fs.readFileSync("./ca.pem"),
+      },
+    });
+
+    console.log("Connected to database");
+    return { database, stat: true };
+  } catch (err) {
+    console.log(`Error occured while trying to connect to database: ${err}`);
+  }
+}
+
+export const { database, stat: isConnected } = await db();

@@ -1,0 +1,59 @@
+:root {
+  --primary: #008080;
+  --accent: #ffa500;
+  --white: #ffffff;
+}
+
+.card {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.9) 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--white);
+  pointer-events: none;
+}
+
+.para,
+.small {
+  color: #e2e2e2;
+  font-weight: 400;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #535353;
+  margin-top: 10px;
+}
+
+.icon {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  color: var(--accent);
+}

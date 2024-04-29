@@ -1,0 +1,54 @@
+:root {
+  --primary: #008080;
+  --accent: #ffa500;
+  --white: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 50px;
+  }
+
+  .titleOrange {
+    font-size: 40px;
+    color: var(--accent);
+  }
+  .titleWhite {
+    font-size: 40px;
+    color: var(--white);
+  }
+
+  .heroDesc {
+    font-size: 20px;
+    color: var(--white);
+    margin: 10px 0;
+    max-width: 800px;
+  }
+}
+
+.heroButton {
+  display: block;
+  width: fit-content;
+  border-radius: 30px;
+  color: var(--white);
+  border: none;
+  padding: 10px 30px;
+  background: var(--accent);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.heroButton:hover {
+  filter: brightness(0.8);
+}
+
+.heroButton .icon {
+  transition: 0.3s all;
+}
+
+.heroButton:hover > .icon {
+  transform: translateX(5px);
+}

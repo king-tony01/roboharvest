@@ -1,0 +1,104 @@
+:root {
+  --primary: #008080;
+  --accent: #ffa500;
+  --white: #ffffff;
+}
+
+.register {
+  padding: 100px 0;
+  background: url(/public/images/register-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 800px) {
+  .formDivide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--primary);
+    gap: 20px;
+  }
+
+  .register {
+    padding: 50px;
+  }
+
+  .field {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.formImage {
+  width: 100%;
+  border-radius: 20px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.formTitle {
+  max-width: 800px;
+}
+
+.formDivide {
+  margin: 20px 0;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.inputWrap {
+  border-radius: 10px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  font-size: 16px;
+  border: none;
+  background: none;
+  display: block;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.icon {
+  color: rgb(131, 131, 131);
+  display: block;
+  margin: 15px;
+}
+
+.below {
+  border: none;
+}
+
+.select {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.registerButton {
+  display: block;
+  margin: 20px 0;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  background: var(--accent);
+  color: var(--white);
+  cursor: pointer;
+  font-family: "Poppins" sans-serif;
+}

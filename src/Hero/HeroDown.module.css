@@ -1,0 +1,25 @@
+:root {
+  --primary: #008080;
+  --accent: #ffa500;
+  --white: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .downSection {
+    padding: 0 50px;
+  }
+}
+
+.downCon {
+  padding: 10px;
+  border-radius: 10px;
+  color: #d9c195;
+  margin: 0 10px;
+  background: rgba(0, 128, 128, 0.3);
+  display: inline-flex;
+  align-items: center;
+}
+
+.downP {
+  margin-left: 10px;
+}

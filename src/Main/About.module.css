@@ -1,0 +1,68 @@
+:root {
+  --primary: #008080;
+  --accent: #ffa500;
+  --white: #ffffff;
+}
+
+.about {
+  margin: 20px 0;
+  background: url(/public/images/about-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.aboutChild {
+  margin: 40px 0;
+}
+
+@media (min-width: 600px) {
+  .aboutChild {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .about {
+    padding: 0 50px;
+  }
+}
+
+.aboutImage {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.aboutText {
+  font-size: 20px;
+}
+
+.buttonCon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.button {
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button.light {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.button.heavy {
+  background: var(--accent);
+  color: var(--white);
+}
