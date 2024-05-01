@@ -1,7 +1,7 @@
 import { database } from "./db.js";
 
 export async function insertOne(data) {
-  const query = `INSERT INTO attendees(first_name, last_name, email, phone, affiliation, registered_on) VALUES(?,?,?,?,?,?)`;
+  const query = `INSERT INTO attendees(first_name, last_name, email, phone, affiliation, registered_on) VALUES(?,?,?,?,?,NOW())`;
   const exist = `SELECT * FROM attendees WHERE (first_name = ? AND last_name = ?) OR email = ?`;
   try {
     await database.beginTransaction();
@@ -22,7 +22,6 @@ export async function insertOne(data) {
       data.email,
       data.phone,
       data.role,
-      NOW(),
     ]);
     await database.commit();
     return { stat: true, message: "Registration successful!" };
@@ -69,9 +68,9 @@ export async function removeOne(id) {
 }
 
 export async function insertMail(email) {
-  const query = `INSERT INTO newsletter(email, subscribed_on) VALUES(?,?)`;
+  const query = `INSERT INTO newsletter(email, subscribed_on) VALUES(?,NOW())`;
   try {
-    await database.query(query, [email, NOW()]);
+    await database.query(query, [email.email]);
     await database.commit();
     return { stat: true, message: "Subscription successful!" };
   } catch (err) {
@@ -80,6 +79,26 @@ export async function insertMail(email) {
     return {
       stat: false,
       message: "Error occured while creating subscription!",
+    };
+  }
+}
+
+export async function insertMessage(message) {
+  const query = `INSERT INTO newsletter(full_name, email, message, sent_on) VALUES(?,?,?, NOW())`;
+  try {
+    await database.query(query, [
+      message.fullName,
+      message.email,
+      message.message,
+    ]);
+    await database.commit();
+    return { stat: true, message: "Message sent successfully!" };
+  } catch (err) {
+    await database.rollback();
+    console.log(err);
+    return {
+      stat: false,
+      message: "Error occured while sending message!",
     };
   }
 }

@@ -1,5 +1,5 @@
-import "dotenv/config.js";
-import { createConnection } from "mysql2/promises";
+import "dotenv/config";
+import { createConnection } from "mysql2/promise";
 import { readFileSync } from "fs";
 async function db() {
   try {
@@ -10,7 +10,7 @@ async function db() {
       database: process.env.DATABASE,
       port: 19655,
       ssl: {
-        ca: fs.readFileSync("./ca.pem"),
+        ca: readFileSync("./ca.pem"),
       },
     });
 

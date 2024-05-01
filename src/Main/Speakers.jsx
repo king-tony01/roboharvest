@@ -1,9 +1,9 @@
 import Title from "../Title.jsx";
 import SpeakerCard from "./SpeakerCard.jsx";
 import style from "./Speakers.module.css"
-import edwardImage from "/images/edward.jpg"
-import myProfile from "/images/myprofile.png"
-import daniel from "/images/daniel.jpg"
+import edwardImage from "/public/images/edward.jpg"
+import myProfile from "/public/images/myprofile.jpg"
+import daniel from "/public/images/daniel.jpg"
 
 function Speakers(){
     return(

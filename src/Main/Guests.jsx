@@ -1,6 +1,6 @@
 import Title from "../Title.jsx"
-import vcImage from "/images/vc.jpg"
-import deanImage from "/images/dean.jpg"
+import vcImage from "/public/images/vc.jpg"
+import deanImage from "/public/images/dean.jpg"
 import style from "./Guests.module.css"
 function Guests(){
     return(

@@ -12,7 +12,7 @@ function HomePage(){
     return(
         <>
       <Header/>
-      <About/>
+      <About stat={true}/>
       <Speakers/>
       <Guests/>
       <Schedule/>

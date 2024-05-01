@@ -1,5 +1,5 @@
 import style from "./Invitation.module.css"
-import flyer from "/images/flyer.jpg"
+import flyer from "/public/images/flyer.jpg"
 function Invitation(){
     const icon = `fas fa-cloud-download-alt ${style.icon}`
     return(
