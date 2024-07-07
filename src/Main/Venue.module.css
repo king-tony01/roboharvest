@@ -17,6 +17,12 @@
   }
 }
 
+@media (max-width: 790px) {
+  .venue {
+    padding: 10px;
+  }
+}
+
 .map {
   display: block;
   border: 5px solid #a6f5f5;

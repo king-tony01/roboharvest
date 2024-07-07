@@ -9,6 +9,7 @@ function MiddleFooter(){
         <section className={style.middle}>
             <Socials/>
             <div>
+                <a style={styles} href="/admin" target="_blank">Admin |</a>
                 <a style={styles} href="#">Terms of Service |</a>
                 <a style={styles} href="#"> Privacy Policy</a>
             </div>

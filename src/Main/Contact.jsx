@@ -69,11 +69,11 @@ function Contact(){
                     <div>
                         <a className={style.a} href="mailto:kingtony3825@gmail.com">
                             <i className="fas fa-envelope"></i>
-                            kingtony3825@gmail.com
+                            nkemdirimedward@gmail.com
                         </a>
                         <a className={style.a} href="tel:+2349063213825">
                             <i className="fas fa-phone"></i>
-                            +234 90 6321 3825
+                            +234 81 0302 5793
                         </a>
                     </div>
                 </div>

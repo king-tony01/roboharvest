@@ -38,7 +38,9 @@ export async function insertOne(data) {
 export async function getAll() {
   try {
     await database.beginTransaction();
-    const [rows] = await database.query("SELECT * FROM attendees");
+    const [rows] = await database.query(
+      "SELECT * FROM attendees ORDER BY first_name ASC"
+    );
     await database.commit();
     return rows;
   } catch (err) {
@@ -47,6 +49,22 @@ export async function getAll() {
     return {
       stat: false,
       message: "There's a problem fetching attendees!",
+    };
+  }
+}
+
+export async function getAllMessages() {
+  try {
+    await database.beginTransaction();
+    const [rows] = await database.query("SELECT * FROM messages");
+    await database.commit();
+    return rows;
+  } catch (err) {
+    await database.rollback();
+    console.log(err);
+    return {
+      stat: false,
+      message: "There's a problem fetching messages!",
     };
   }
 }
@@ -84,7 +102,7 @@ export async function insertMail(email) {
 }
 
 export async function insertMessage(message) {
-  const query = `INSERT INTO newsletter(full_name, email, message, sent_on) VALUES(?,?,?, NOW())`;
+  const query = `INSERT INTO messages(full_name, email, message, sent_on) VALUES(?,?,?, NOW())`;
   try {
     await database.query(query, [
       message.fullName,

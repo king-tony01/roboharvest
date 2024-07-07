@@ -102,3 +102,31 @@
   cursor: pointer;
   font-family: "Poppins" sans-serif;
 }
+
+@media (max-width: 790px) {
+  .formDivide {
+    padding: 10px;
+    border-radius: 20px;
+    background: var(--primary);
+  }
+
+  .register {
+    padding: 10px;
+  }
+
+  .field {
+    border: none;
+  }
+
+  .inputWrap {
+    margin: 10px 0;
+  }
+
+  .registerButton {
+    margin: unset;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+  }
+}

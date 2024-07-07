@@ -23,6 +23,12 @@
   }
 }
 
+@media (max-width: 790px) {
+  .contactMain {
+    padding: 10px;
+  }
+}
+
 .half {
   max-width: 1000px;
 }

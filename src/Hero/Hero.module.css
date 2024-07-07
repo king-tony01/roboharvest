@@ -26,6 +26,19 @@
   }
 }
 
+.titleOrange {
+  color: var(--accent);
+}
+.titleWhite {
+  color: var(--white);
+}
+
+.heroDesc {
+  color: var(--white);
+  margin: 10px 0;
+  max-width: 800px;
+}
+
 .heroButton {
   display: block;
   width: fit-content;
@@ -51,4 +64,10 @@
 
 .heroButton:hover > .icon {
   transform: translateX(5px);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 20px;
+  }
 }

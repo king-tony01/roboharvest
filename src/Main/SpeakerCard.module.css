@@ -57,3 +57,9 @@
   border-radius: 50%;
   color: var(--accent);
 }
+
+@media (max-width: 800px) {
+  .card {
+    margin: 10px 0;
+  }
+}

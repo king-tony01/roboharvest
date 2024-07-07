@@ -22,6 +22,10 @@
   .nav {
     padding: 20px 50px;
   }
+
+  .menuIcon {
+    display: none;
+  }
 }
 
 .logo {
@@ -70,4 +74,57 @@ ul li a {
   height: 5px;
   background: var(--accent);
   border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 20px;
+  }
+  .logo img {
+    display: none;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav {
+    position: relative;
+  }
+
+  .nav ul {
+    position: absolute;
+    background: var(--white);
+    box-shadow: 0 4px 10px rgba(49, 49, 49, 0.2);
+    top: 100%;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: 0.3s all;
+  }
+
+  .nav .menu {
+    height: fit-content;
+    transition: 0.5s all;
+  }
+
+  .nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  .nav .logo img {
+    display: block;
+    width: 30px;
+  }
+
+  .menuIcon {
+    display: block;
+    transition: 0.5s all;
+    font-size: 30px;
+    color: var(--primary);
+  }
 }

@@ -22,6 +22,9 @@
   }
 }
 @media (max-width: 500px) {
+  .container {
+    padding: 10px;
+  }
   .grid {
     margin: 20px 0;
   }
